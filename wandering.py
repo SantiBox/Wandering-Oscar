@@ -10,3 +10,4 @@ class comunWandering(Wandering):
     
         def walk(self):
             return random.choice([(0,2)(0,-2)(2,0)(-2,0)])
+
