@@ -24,8 +24,32 @@ def walking(location, wandering,  steps):
             return distance
 
         def graph(x, y):
-            graphs = figure (title = 'Camiino del Errante', x_axis_label='Steps', y_axis_label='Distance')
+            graphics = figure (title = 'Camiino del Errante', x_axis_label='Steps', y_axis_label='Distance')
             graphics.line(x, y, legend='Distance')
             show(graphics)
+
+            def main(distance_walk, number_attempts, type_wandering):
+                average_walking_distance = []
+
+                for steps in  distance_walk:
+                    distance = simulate_walk(steps, number_attempts, type_wandering)
+                    middle_distance = reound(sum(distance)/ len(distance), 4)
+                    max_distance = max(distance)
+                    min_distance = min(distance)
+                    average_walking_distance.append(middle_distance)
+                    print(f'{type_wandering._name_} Caminata aleatoria de {steps} pasos')
+                    print(f'media = {middle_distance}')
+                    print(f'max = {max_distance}')
+                    print(f'min = {min_distance}')
+
+                    graph(distance_walk, average_walking_distance)
+
+                    if _name_ == '_main_':
+                        distance_walk = [10, 100, 1000, 10000]
+                        number_attempts = 100
+                        main(distance_walk, number_attempts, comunWandering)
+
+
+                    
 
 
