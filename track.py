@@ -7,7 +7,7 @@ class Track:
             return Track(self.x + delta_y, self.y + delta_y)
 
         def distance(self, other_track):
-            delta_x = self_x - other_track.x
-            delta_y = self_y - other_track.y
+            delta_x = self.x - other_track.x
+            delta_y = self.y - other_track.y
 
             return (delta_x**2 + delta_y**2)**0,5
