@@ -9,4 +9,4 @@ class ComunWandering(wandering):
         super().__init__(name)
        
     def walk(self):
-        return random.choice([(0,3),(0,-3),(3,0),(-3,0)])
+        return random.choice([(0,4),(0,-3),(3,0),(-3,0)])
