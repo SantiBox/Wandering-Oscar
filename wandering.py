@@ -17,7 +17,7 @@ class ComunWandering(wandering):
         super().__init__(name)
        
     def walk(self):
-        dx, dy = random.choice([(0,4),(0,-3),(3,0),(-1,0)])
+        dx, dy = random.choice([(0,1),(0,-1),(1,0),(-1,0)])
         self.y += dy
         self.x += dx
         return [dx, dy]
